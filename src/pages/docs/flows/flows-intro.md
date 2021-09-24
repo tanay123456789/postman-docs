@@ -5,17 +5,22 @@ page_id: "postman_flows_intro"
 warning: false
 ---
 
-_Postman Flows_ is a no-code solution you can use to visually connect and chain together your APIs defined across all of your collections to build workflows.
+_Postman Flows_ is a tool you can use to easily create API workflows. It is a no-code solution to visually connect and chain together APIs. Sequence together APIs defined across any Postman collection within a workspace, and integrate different services together. With an easy-to-use visual editor inside Postman, you can define, test, and run your flows.
 
-integrate
+<!--TODO screenshot -->
 
-Postman's collection runner is a way to run API requests in a collection serially. This is great when you have a single collection you want to run each request top-to-bottom (or write some code to specify a different order). But what if you want to run requests from different collections, and add logic to determine what's run and when? That's where Postman Flows comes in.
+With flows, you can take requests from different collections, and connect them together to build a multi-tier workflow. Pass the results of an API request to another request, or make requests in parallel. You can evaluate results of a request with logical operators and execute different branches of the workflow based on the return values. There are also tools to combine results from multiple requests, convert response data to another format, or iterate over a response, making calls from each item in a list.
 
-You can take requests from different collections, and connect them together with logic to build a workflow. You can evaluate at the results of a request and execute different branches of the workflow depending on values in the return. There are also powerful tools to do things like combine results from multiple API requests and send them to another request, convert response data to another format, or iterate with a response, creating multiple requests.
+Flows reside in a workspace, so you can collaborate with your team members on them. Share your completed flows with your team, or create a public workspace to show your workflows to the world!
 
-From UX:
-Flows help you test real-world processes by logically connecting a series of requests.
+## Getting started
 
-From blog:
+To get started using Postman Flows, check out the following:
 
-Postman Flows let you visually connect and chain together your APIs defined across all of your collections to build workflows. There are a lot of amazing things you could do with flows,
+* Concepts
+* [Postman Flows Tutorials](/docs/flows/tutorials/tutorials-intro/)
+
+<!-- TODO: links:
+workspaces? https://postman.postman.co/workspace/Showcasing-Flows~80b5a4ff-f242-45cc-8f4b-8bda2472a9d0/overview
+blog?
+community? -->
