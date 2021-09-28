@@ -9,7 +9,7 @@ _Postman Flows_ is a tool you can use to easily create API workflows. It is a no
 
 <!--TODO screenshot -->
 
-With flows, you can take requests from different collections, and connect them together to build a multi-tier workflow. Pass the results of an API request to another request, or make requests in parallel. You can evaluate results of a request with logical operators and execute different branches of the workflow based on the return values. There are also tools to combine results from multiple requests, convert response data to another format, or iterate over a response, making calls from each item in a list.
+With Postman Flows, you can take requests from different collections, and connect them together to build a multi-tier workflow. Pass the results of an API request to another request, or make requests in parallel. You can evaluate results of a request with logical operators and execute different branches of the workflow based on the return values. There are also tools to combine results from multiple requests, convert response data to another format, or iterate over a response, making calls from each item in a list.
 
 Flows reside in a workspace, so you can collaborate with your team members on them. Share your completed flows with your team, or create a public workspace to show your workflows to the world!
 

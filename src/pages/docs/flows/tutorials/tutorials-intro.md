@@ -25,11 +25,15 @@ Rename your flow by clicking the name in the top row of the tab. You can delete 
 
 To add a new block, select **Add Block** at the bottom of the canvas. This opens the block list, and you can select a block type. Then select the canvas to drop the block.
 
-Each block has an input and output ports:
+Each block has input and output ports. You can see them when you hover over a block:
 
 <!--TODO: screenshot -->
 
-You can connect individual blocks by dragging an output port from one block to the input port of another block. You can quickly create blocks that are connected to other blocks by selecting the **+** in a block's output port.
+You can connect individual blocks by dragging an output port from one block to the input port of another block.
+
+You can also quickly create new blocks that are connected to other blocks by selecting the **+** in a block's output port. This opens the block list, just like when you click **Add Block**, but the new block will be automatically connected to the previous one.
+
+To disconnect blocks, select the connector between them and press Delete. Likewise, to delete a block, select it and press Delete.
 
 ## Configuring blocks
 
@@ -37,7 +41,7 @@ All the important configurations a block needs to work successfully can be done 
 
 ## Running a flow
 
-The first block of your flow is a start block. After you've added and connected blocks, select the start block to run the flow. You can also select the start button at the bottom of the canvas. Annotation blocks aren't connected to other blocks; you can place them anywhere on the canvas you want to add text.
+The first block of your flow is a start block. After you've added and connected blocks, select the start block to run the flow. You can also select the start button at the bottom of the canvas.
 
 ## Sending a request
 
@@ -45,9 +49,11 @@ You can jump from the request block to the saved request in your workspace with 
 
 ## Using the terminal
 
+<!-- TODO -->
+
 ## Annotating blocks
 
-You can create flows in a team workspace to share with others. When you do it, we recommend you annotate your flows to help others understand easily. You can annotate by selecting the annotation block from the block list.
+You can create flows in a team workspace to share with others. When you do it, we recommend you annotate your flows to help others understand easily. You can annotate by selecting the annotation block from the block list. Annotation blocks aren't connected to other blocks; you can place them anywhere on the canvas you want to add text.
 
 ## Passing data between requests
 
