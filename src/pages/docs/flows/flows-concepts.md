@@ -14,8 +14,8 @@ warning: false
 * Block - A blackbox that can receive inputs and provides an output.
 * Block list - A filterable list of all available blocks.
 * Port - Inlets/outlets from where data can flow in and out of blocks.
-There are 2 types of ports: Input ports and output ports INTERNAL
-* Link - The curved line that connects 2 blocks in the GUI
+There are two types of ports: Input ports and output ports
+* Link - The line that connects two blocks in the GUI
 
 * Toolbar - List of actions that pop on top of a block when hovering on a block
 * Window - The sidebar where you can view properties/logs/documentations
