@@ -31,7 +31,9 @@ Each block has input and output ports. You can see them when you hover over a bl
 
 You can connect individual blocks by dragging an output port from one block to the input port of another block.
 
-You can also quickly create new blocks that are connected to other blocks by selecting the **+** in a block's output port. This opens the block list, just like when you click **Add Block**, but the new block will be automatically connected to the previous one.
+You can quickly create new blocks that are automatically connected to another blocks by selecting the **+** on a block's output port. This opens the block list, just like when you click **Add Block**, but the new block will be automatically connected to the previous one.
+
+It's easy to duplicate a block, too. Select it and press Cmd-D.
 
 To disconnect blocks, select the connector between them and press Delete. Likewise, to delete a block, select it and press Delete.
 
