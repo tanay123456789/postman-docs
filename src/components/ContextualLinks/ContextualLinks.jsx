@@ -4,20 +4,22 @@ import recentBlogPosts from '../../../bff-data/blog.json';
 
 import './ContextualLinks.scss';
 
+const { v4: uuidv4 } = require('uuid');
+
 const ContextualLinks = ({ links }) => (
   <div className="contextual-links">
     {
       links.map((item) => {
         if (item.type === 'link') {
           return (
-            <div className="contextual-links__link" key={item.name}>
+            <div className="contextual-links__link" key={uuidv4()}>
               <DynamicLink url={item.url} name={item.name} />
             </div>
           );
         }
         if (item.type === 'subtitle') {
           return (
-            <div className="contextual-links__subtitle" key={item.name}>
+            <div className="contextual-links__subtitle" key={uuidv4()}>
               {item.name}
             </div>
           );
