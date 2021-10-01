@@ -33,17 +33,15 @@ You can connect individual blocks by dragging an output port from one block to t
 
 You can quickly create new blocks that are automatically connected to another blocks by selecting the **+** on a block's output port. This opens the block list, just like when you click **Add Block**, but the new block will be automatically connected to the previous one.
 
-Also notice that some blocks will have more than one input port (like the Combine block) or more than one output (like the Validate block). You can also add multiple connectors to a port. For example, you can create parallel flows from the Start block, and run multiple chains of blocks at the same time. Or connect a request's response to multiple blocks, if you want to use the same response in more than one chain.
+Also notice that some blocks will have more than one input port (like the Combine block) or more than one output (like the Validate block). It's also possible to add multiple connectors to one output port. For example, you can create parallel flows from the Start block, and run multiple chains of blocks at the same time. Or connect a request's response to multiple blocks, if you want to use the same response in more than one chain.
 
 It's easy to duplicate a block, too. Select it and press Cmd-D.
 
 To disconnect blocks, select the connector between them and press Delete. Likewise, to delete a block, select it and press Delete.
 
-<!--TODO gif? -->
-
 ## Configuring blocks
 
-Each block contains configuration settings which define how the block works in your flow. For example, in a Request block, you can select the HTTP request from a collection, and that request will be made when the block is run.
+Each block contains configuration settings which define how the block works in your flow. For example, in a Request block, you can select a HTTP request from a collection, and that request will be made when the block is run.
 
 Some blocks will have an **Advanced** button you can select to see additional configuration options. Select **Basic** to go back to the original settings.
 
@@ -51,33 +49,30 @@ Click <img alt="Three dots icon" src="https://assets.postman.com/postman-docs/ic
 
 ## Running a flow
 
-The first block of your flow is the Start block. All of your connected blocks will flow from the output port of the Start block. After you've added and connected blocks, select the start block to run the flow. You can also select the start button at the bottom of the canvas.
+The first block of your flow is the Start block. All of your connected blocks will flow from the output port of the Start block. After you've added and connected blocks, select the Start block to run the flow. You can also select the start button at the bottom of the canvas.
 
-When you run a flow, you'll notice a few things. First, connectors between blocks will pulse blue as the data and execution flows from block to block. And each block has an indicator next to the name that will show the run state of that block. Also, if your block encounters an error when you run the flow, the block and its connectors will be red, and an error message will appear above the block.
+When you run a flow, you'll notice a few things happening. First, connectors between blocks will pulse blue as the data and execution flows from block to block. And each block has an indicator next to the name that will show the run state of that block. And if your block encounters an error when you run the flow, the block and its connectors will be red, and an error message will appear above the block.
 
 ## Sending a request
 
+<!-- TODO: explain -->
+
 You can jump from the request block to the saved request in your workspace with the arrow button.
 
-<!-- TODO: explain -->
 
 ## Using the terminal
 
-In the upper right corner of the canvas is the _terminal_, which is a The terminal displays log messages and output from any terminal
+In the upper right corner of the canvas is the _terminal_. This is a console that can be used to display logs from blocks. This is a great way to monitor how blocks are operating, or to get debugging information for further testing. To use the terminal, add a Terminal block connected to the output of another block. The output data will then be shown in the terminal.
 
-<!-- TODO:
+For example, add a Terminal block after a Send Request block. When the request runs, its response will be sent to the terminal.
 
-explain
-
-In the upper right
-
--->
+There's a dropdown list in the terminal where you can select different groups. This is useful if you have multiple Terminal blocks sending information to the terminal. In each Terminal block, you can enter a different group name, and then select the group in the terminal to see only that output.
 
 ## Annotating blocks
 
-Make sure to document your flows as needed. Since you'll be sharing flows with other teammates in your workspace, you may want to explain what blocks do or how they're connected.
+You can label or document your flows as needed. Since you'll be sharing flows with other teammates in your workspace, you may want to explain what blocks do or how they're connected.
 
-You can annotate your flows by adding an Annotation block from the block list. Annotation blocks aren't connected to other blocks; you can place them anywhere on the canvas you want to add text.
+Annotate your flows by adding an Annotation block from the block list. Annotation blocks aren't connected to other blocks; you can place them anywhere on the canvas you want to add text.
 
 ## Renaming and deleting flows
 
