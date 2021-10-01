@@ -107,11 +107,23 @@ li {
       }
     }
   }
+  .currentUrl{
+    font-weight: 700;
+    // margin-left: 23px;
+    background-color: #f2f2f2;
+
+    > * {
+      vertical-align: middle;
+    }
+  }
+
 
   .child {
-    margin-left: 28px;
-    margin-bottom: 24px;
-
+    margin-left: 16px;
+    margin-right: 16px;
+    // margin-bottom: 24px;
+    // text-decoration: none;
+    list-style-type: none;
     &.currentUrl{
       font-weight: 700;
       margin-left: 23px;

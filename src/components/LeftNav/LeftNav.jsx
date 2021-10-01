@@ -1,5 +1,5 @@
 // import { useStaticQuery, graphql, Link } from 'gatsby';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import './LeftNav.scss';
 import { leftNavItems } from './LeftNavItems';
@@ -19,6 +19,17 @@ const LeftNav = (props) => {
   const [subMenuItems2State, setSubMenuItems2] = useState({});
   // determine if URL is current
   const [currentUrl, setCurrentUrl] = useState('');
+
+
+  const clickRef = useRef();
+
+  const handleClick = (e) => {
+    console.log('click');
+    e.preventDefault();
+    const nameC = clickRef.current.value;
+    console.log(nameC);
+  };
+
 
   // onclick event for first menu item
   const handleMenuItemClick = (name, index, isChild) => {
@@ -47,7 +58,8 @@ const LeftNav = (props) => {
   useEffect(() => {
     // populate empty object with dropdown items
     const newSubMenu = {};
-    LeftNavItems.forEach((item, index) => {
+    // leftNavItems is the imported json
+    leftNavItems.forEach((item, index) => {
       // 0 is falsy and other nmber is truthu so this equals true
       const hasSubItems1 = item.subMenuItems1 && item.subMenuItems1.length !== 0;
       // if parent has dropdown we add state to those index
@@ -64,7 +76,7 @@ const LeftNav = (props) => {
   useEffect(() => {
     const newSubMenu2 = {};
 
-    LeftNavItems.forEach((item, index) => {
+    leftNavItems.forEach((item, index) => {
       const hasSubItems2Array = item.subMenuItems1 && item.subMenuItems1.map((item2) => item2.subMenuItems2 && item2.subMenuItems2.length !== 0);
       const hasSubItems2 = hasSubItems2Array && hasSubItems2Array.length !== 0;
       if (hasSubItems2) {
@@ -92,37 +104,40 @@ const LeftNav = (props) => {
     // ES6 ternary statement, if first is true then add isOpen, else null
     const isOpen = subMenuItemsState[index]?.isOpen;
     const isOpen2 = subMenuItems2State[index]?.isOpen2;
-
-
+    const thisUrl = (pizza) => currentUrl.includes(pizza);
     const inUrl = (url, isUrlChild) => {
       const liIsActive = currentUrl.includes(url) ? (isitemselected && isOpen) : 'no pizza parents';
-
+      console.log(url, isUrlChild);
       if (liIsActive === false && isUrlChild === false) {
         handleMenuItemClick(item.name, index, false);
       }
       if (liIsActive === true && isUrlChild === true) {
-        item.subMenuItems1.map((item2) => (
-          item2.subMenuItems2 ? (
-            item2.subMenuItems2.map((item3) => {
-              const isitemselected2 = selected2 === item3.name;
-              const liIsActive2 = currentUrl.includes(item3.url) ? (isitemselected2 && isOpen2) : 'no pizza kids';
-              console.log(selected2, liIsActive, isOpen2);
-              if (liIsActive2 === true && isUrlChild === true) {
-                handleMenuItemClick(item2.name, index, true);
-                // console.log(item3);
-              } else {
-                console.log('item3 is closed');
-              }
-            })) : ''));
+        // setSelectedMenuItem2(item.name);
+        // handleMenuItemClick(item.name, index, true);
+        // handleClick();
       }
-    };
+        // item.subMenuItems1.map((item2) => (
+        //   item2.subMenuItems2 ? (
+        //     item2.subMenuItems2.map((item3) => {
+        //       const isitemselected2 = selected2 === item3.name;
+      //         const liIsActive2 = currentUrl.includes(item3.url) ? (isitemselected2 && isOpen2) : 'no pizza kids';
+      //         console.log(selected2, liIsActive, isOpen2);
+      //         if (liIsActive2 === true && isUrlChild === true) {
+      //           handleMenuItemClick(item2.name, index, true);
+      //           // console.log(item3);
+      //         } else {
+      //           console.log('item3 is closed');
+      //         }
+            // })) : ''));
+      }
+    // };
 
     // returns level 1 children
     const itemHasChildrenJSX = item.subMenuItems1 && item.subMenuItems1.map((subItem1) => {
       if (!subItem1.subMenuItems2) {
         return (
-          <li key={uuidv4()}>
-            <Link to={subItem1.url} className={`sub-menu-item-1 ${inUrl(subItem1.url, false) ? 'active-caret currentUrl' : 'not-current-url'}`} key={uuidv4()}>
+          <li key={uuidv4()} className="child">
+            <Link to={subItem1.url} className={`sub-menu-item-1 ${thisUrl(subItem1.url) ? 'currentUrl' : ''} ${inUrl(subItem1.url, false) ? 'active-caret currentUrl' : ''}`} key={uuidv4()}>
               {subItem1.name}
             </Link>
           </li>
@@ -147,8 +162,9 @@ const LeftNav = (props) => {
             {isitemselected2 && isOpen2 && (
             <span className="sub-menu-item-2-container">
               { item3.subMenuItems2.map((subItem3) => (
-                <li key={uuidv4()}>
-                  <Link to={subItem3.url} className={`final sub-menu-item-2 ${inUrl(subItem3.url, true) ? 'currentUrl' : 'not-currenturl'}`} key={uuidv4()}>
+                <li key={uuidv4()} className="child">
+                  <Link to={subItem3.url} className={`final sub-menu-item-2 ${thisUrl(subItem3.url) ? 'currentUrl' : ''}  ${inUrl(subItem3.url, true) ? 'currentUrl' : 'not-currenturl'}`} key={uuidv4()}>
+                  {/* <Link to={subItem3.url} onClick={handleClick} className={`final sub-menu-item-2}`} key={uuidv4()}> */}
                     {subItem3.name}
                   </Link>
                 </li>
@@ -165,7 +181,7 @@ const LeftNav = (props) => {
       <ul className="menu-items-container" key={uuidv4()}>
         {/* displays the parent menu item */}
         <div
-          className="menu-items-parent"
+          className="menu-items-parent parent"
           role="button"
           tabIndex={0}
           aria-hidden="true"
@@ -192,7 +208,7 @@ const LeftNav = (props) => {
 
   // displays the entire left nav
   return (
-    <div>
+    <div className="leftNav">
       {LeftNavItemsJSX}
     </div>
   );
