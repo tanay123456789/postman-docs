@@ -21,6 +21,8 @@ This opens a new canvas, containing a Start block and a block list. You can then
 
 <img alt="Flow block list" src="https://assets.postman.com/postman-docs/flows/flow-block-list.jpg" width="350px"/>
 
+Note that any changes you in flows are auto-saved immediately. There's no need to save the flow periodically like you would when editing a request.
+
 ## Adding and connecting blocks
 
 To add a new block, select **Add Block** at the bottom of the canvas. This opens the block list, and you can select a block type. Then select the canvas to drop the block.
@@ -31,7 +33,7 @@ Each block has input and output ports. You can see them when you hover over a bl
 
 You can connect individual blocks by dragging an output port from one block to the input port of another block. For example, connect the **Response** port of a Send Request block to the **Data** port of a Validate block, and your response flows from the first block to the second.
 
-You can quickly create new blocks that are automatically connected to another blocks by selecting the **+** on a block's output port. This opens the block list, just like when you click **Add Block**, but the new block will be automatically connected to the previous one.
+You can quickly create new blocks that are automatically connected to a block by selecting **+** on a block's output port. This opens the block list, just like when you click **Add Block**, but the new block will be automatically connected to the previous one.
 
 Also notice that some blocks will have more than one input port (like the Combine block) or more than one output (like the Validate block). It's also possible to add multiple connectors to one output port. For example, you can create parallel flows from the Start block, and run multiple chains of blocks at the same time. Or connect a request's response to multiple blocks, if you want to use the same response in more than one chain.
 
@@ -39,9 +41,15 @@ It's easy to duplicate a block, too. Select it and press Cmd-D.
 
 To disconnect blocks, select the connector between them and press Delete. Likewise, to delete a block, select it and press Delete.
 
+## Sending a request
+
+The most essential building block of any flow is making a request. To make requests, add a Send Request block. In the block configuration, select a HTTP request from a collection, and that request will be made when the block is run. When the block runs, the request will be made and the response will flow to the next connected block.
+
+If you need to edit or troubleshoot your request, click the <img alt="External link icon" src="https://assets.postman.com/postman-docs/icon-external-link.jpg" width="18px" style="vertical-align:middle;margin-bottom:5px"> in the request block to open it in a new tab.
+
 ## Configuring blocks
 
-Each block contains configuration settings which define how the block works in your flow. For example, in a Request block, you can select a HTTP request from a collection, and that request will be made when the block is run.
+Each block contains configuration settings which define how the block works in your flow. For example, in a Delay block, there's a setting to specify how many milliseconds the block will wait before the next block is called.
 
 Some blocks will have an **Advanced** button you can select to see additional configuration options. Select **Basic** to go back to the original settings.
 
@@ -52,13 +60,6 @@ Click <img alt="Three dots icon" src="https://assets.postman.com/postman-docs/ic
 The first block of your flow is the Start block. All of your connected blocks will flow from the output port of the Start block. After you've added and connected blocks, select the Start block to run the flow. You can also select the start button at the bottom of the canvas.
 
 When you run a flow, you'll notice a few things happening. First, connectors between blocks will pulse blue as the data and execution flows from block to block. And each block has an indicator next to the name that will show the run state of that block. And if your block encounters an error when you run the flow, the block and its connectors will be red, and an error message will appear above the block.
-
-## Sending a request
-
-<!-- TODO: explain -->
-
-You can jump from the request block to the saved request in your workspace with the arrow button.
-
 
 ## Using the terminal
 
@@ -81,19 +82,19 @@ Rename your flow by clicking the name in the top row of the tab and entering a n
 You can delete flows by selecting <img alt="Three dots icon" src="https://assets.postman.com/postman-docs/icon-three-dots-v9.jpg" width="18px" style="vertical-align:middle;margin-bottom:5px"> and then **Delete**.
 
 <!--TODO: these may all be v1.1
+## Variables
+
 ## Passing data between requests
 
 ## Conditions
 
-## Parallel requests
-
 ## For-each loops
 -->
 
-## Troubleshooting
+## For more information
 
-<!-- TODO: lede
-- console
-- test your requests separately outside the flow
-- check postman agent
--->
+<!-- TODO:
+
+
+
+"for more..." -->

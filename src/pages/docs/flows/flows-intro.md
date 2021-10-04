@@ -19,10 +19,5 @@ Flows reside in a workspace, so you can collaborate with your team members on th
 To get started using Postman Flows, check out the following:
 
 * [Postman Flows Tutorials](/docs/flows/tutorials/tutorials-intro/)
-
-<!-- TODO: links:
-* [Postman Flows concepts](/docs/flows/flows-concepts.md)
-
-workspaces? https://postman.postman.co/workspace/Showcasing-Flows~80b5a4ff-f242-45cc-8f4b-8bda2472a9d0/overview
-blog?
-community? -->
+* The [Showcasing Flows](https://postman.postman.co/workspace/Showcasing-Flows~80b5a4ff-f242-45cc-8f4b-8bda2472a9d0/overview) Public Workspace
+* The [User Feedback](https://go.pstmn.io/flows-feedback) post in the Postman Community
