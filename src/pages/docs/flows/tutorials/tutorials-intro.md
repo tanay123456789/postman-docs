@@ -45,11 +45,13 @@ To disconnect blocks, select the connector between them and press Delete. Likewi
 
 The most essential building block of any flow is making a request. To make requests, add a Send Request block. In the block configuration, select a HTTP request from a collection, and that request will be made when the block is run. When the block runs, the request will be made and the response will flow to the next connected block.
 
-If you need to edit or troubleshoot your request, click the <img alt="External link icon" src="https://assets.postman.com/postman-docs/icon-external-link.jpg" width="18px" style="vertical-align:middle;margin-bottom:5px"> in the request block to open it in a new tab.
+<img alt="Flow block and ports" src="https://assets.postman.com/postman-docs/flows/flow-add-send-request.jpg" width="350px"/>
+
+Did your request fail? If you need to edit or troubleshoot your request, click the <img alt="External link icon" src="https://assets.postman.com/postman-docs/icon-external-link.jpg" width="18px" style="vertical-align:middle;margin-bottom:5px"> in the request block to open it in a new tab.
 
 ## Configuring blocks
 
-Each block contains configuration settings which define how the block works in your flow. For example, in a Delay block, there's a setting to specify how many milliseconds the block will wait before the next block is called.
+Each block contains configuration settings which define how the block works in your flow. For example, in the previous Send Request block, the configuration was the request you selected. Or in a Delay block, there's a setting to specify how many milliseconds the block will wait before the next block is called.
 
 Some blocks will have an **Advanced** button you can select to see additional configuration options. Select **Basic** to go back to the original settings.
 
@@ -81,20 +83,9 @@ Rename your flow by clicking the name in the top row of the tab and entering a n
 
 You can delete flows by selecting <img alt="Three dots icon" src="https://assets.postman.com/postman-docs/icon-three-dots-v9.jpg" width="18px" style="vertical-align:middle;margin-bottom:5px"> and then **Delete**.
 
-<!--TODO: these may all be v1.1
-## Variables
-
-## Passing data between requests
-
-## Conditions
-
-## For-each loops
--->
-
 ## For more information
 
-<!-- TODO:
+For more information on using Postman Flows, check out the following:
 
-
-
-"for more..." -->
+* The [Showcasing Flows](https://postman.postman.co/workspace/Showcasing-Flows~80b5a4ff-f242-45cc-8f4b-8bda2472a9d0/overview) Public Workspace
+* The [User Feedback](https://go.pstmn.io/flows-feedback) post in the Postman Community
