@@ -5,9 +5,9 @@ page_id: "postman_flows_tutorials"
 warning: false
 ---
 
-To get started with Postman Flows, make sure you have some API requests in your workspace, so you can use them in your flows. See [Grouping requests in collections]("/docs/sending-requests/intro-to-collections/") for more details.
+To get started with Postman Flows, make sure you have saved API requests in your workspace, so you can use them in your flows. See [Grouping requests in collections]("/docs/sending-requests/intro-to-collections/") for more details.
 
-Flows are located in the left sidebar. Click **Flows** to see the flows in a workspace.
+Flows are located in the left sidebar. Select **Flows** to see the flows in the current workspace.
 
 <img alt="Flow sidebar" src="https://assets.postman.com/postman-docs/flows/flows-left-sidebar.jpg" width="300px"/>
 
@@ -33,7 +33,7 @@ Each block has input and output ports. You can see them when you hover over a bl
 
 You can connect individual blocks by dragging an output port from one block to the input port of another block. For example, connect the **Response** port of a Send Request block to the **Data** port of a Validate block, and your response flows from the first block to the second.
 
-You can quickly create new blocks that are automatically connected to a block by selecting **+** on a block's output port. This opens the block list, just like when you click **Add Block**, but the new block will be automatically connected to the previous one.
+You can quickly create new blocks that are automatically connected to a block by selecting **+** on a block's output port. This opens the block list, just like when you select **Add Block**, but the new block will be automatically connected to the previous one.
 
 Also notice that some blocks will have more than one input port (like the Combine block) or more than one output (like the Validate block). It's also possible to add multiple connectors to one output port. For example, you can create parallel flows from the Start block, and run multiple chains of blocks at the same time. Or connect a request's response to multiple blocks, if you want to use the same response in more than one chain.
 
@@ -47,7 +47,7 @@ The most essential building block of any flow is making a request. To make reque
 
 <img alt="Flow block and ports" src="https://assets.postman.com/postman-docs/flows/flow-add-send-request.jpg" width="350px"/>
 
-Did your request fail? If you need to edit or troubleshoot your request, click the <img alt="External link icon" src="https://assets.postman.com/postman-docs/icon-external-link.jpg" width="18px" style="vertical-align:middle;margin-bottom:5px"> in the request block to open it in a new tab.
+Did your request fail? If you need to edit or troubleshoot your request, select the <img alt="External link icon" src="https://assets.postman.com/postman-docs/icon-external-link.jpg" width="18px" style="vertical-align:middle;margin-bottom:5px"> in the request block to open it in a new tab.
 
 ## Configuring blocks
 
@@ -55,7 +55,7 @@ Each block contains configuration settings which define how the block works in y
 
 Some blocks will have an **Advanced** button you can select to see additional configuration options. Select **Basic** to go back to the original settings.
 
-Click <img alt="Three dots icon" src="https://assets.postman.com/postman-docs/icon-three-dots-v9.jpg" width="18px" style="vertical-align:middle;margin-bottom:5px"> in each block for a menu of other options. Select **View Information** to see a complete view of the block's input received, output generated, configuration, and more information on the block.
+Select <img alt="Three dots icon" src="https://assets.postman.com/postman-docs/icon-three-dots-v9.jpg" width="18px" style="vertical-align:middle;margin-bottom:5px"> in each block for a menu of other options. Select **View Information** to see a complete view of the block's input received, output generated, configuration, and more information on the block.
 
 ## Running a flow
 
@@ -79,7 +79,7 @@ Annotate your flows by adding an Annotation block from the block list. Annotatio
 
 ## Renaming and deleting flows
 
-Rename your flow by clicking the name in the top row of the tab and entering a new name.
+Rename your flow by selecting the name in the top row of the tab and entering a new name.
 
 You can delete flows by selecting <img alt="Three dots icon" src="https://assets.postman.com/postman-docs/icon-three-dots-v9.jpg" width="18px" style="vertical-align:middle;margin-bottom:5px"> and then **Delete**.
 
