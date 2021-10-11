@@ -787,6 +787,28 @@ export const leftNavItems = [
       },
     ],
   },
+  {
+    name: 'Flows',
+    parentSlug: 'flows',
+    url: '/docs/flows/flows-intro/',
+    subMenuItems1: [
+      {
+        name: 'Introduction to Postman Flows',
+        url: '/docs/flows/flows-intro/',
+      },
+      {
+        name: 'Postman Flows tutorials',
+        subParentSlug: 'tutorials',
+        slug: '/docs/flows/tutorials/tutorials-intro/',
+        subMenuItems2: [
+          {
+            name: 'Postman Flows Introduction Tutorial',
+            url: '/docs/flows/tutorials/tutorials-intro/',
+          },
+        ],
+      },
+    ]
+  }
 ];
 
 // export default parentSlugItems;
