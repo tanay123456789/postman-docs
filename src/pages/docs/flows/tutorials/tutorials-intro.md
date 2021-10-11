@@ -90,4 +90,4 @@ You can delete flows by selecting <img alt="Three dots icon" src="https://assets
 For more information on using Postman Flows, check out the following:
 
 * The [Showcasing Flows](https://postman.postman.co/workspace/Showcasing-Flows~80b5a4ff-f242-45cc-8f4b-8bda2472a9d0/overview) Public Workspace
-* The [User Feedback](https://go.pstmn.io/flows-feedback) post in the Postman Community
+* The [Postman Flows Discussion](https://go.pstmn.io/flows-feedback) on GitHub

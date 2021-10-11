@@ -6,7 +6,7 @@ search_keyword: "Postman flows, flows, workflows, flow runner, flowrunner"
 warning: false
 ---
 
-_Postman Flows_ is a tool you can use to easily create API workflows. It is a no-code solution to visually connect and chain together API requests. Sequence together API calls defined in any Postman collection within a workspace, and integrate different services together. With an easy-to-use visual editor inside Postman, you can define, test, and run your flows.
+_Postman Flows_ is a tool you can use to easily create API workflows. You can visually connect and chain together API requests. Sequence together API calls defined in any Postman collection within a workspace, and integrate different services together. With an easy-to-use visual editor inside Postman, you can define, test, and run your flows.
 
 <img alt="Postman Flows" src="https://assets.postman.com/postman-docs/flows/postman-flows-intro.jpg"/>
 
@@ -20,4 +20,4 @@ To get started using Postman Flows, check out the following:
 
 * [Postman Flows Tutorials](/docs/flows/tutorials/tutorials-intro/)
 * The [Showcasing Flows](https://postman.postman.co/workspace/Showcasing-Flows~80b5a4ff-f242-45cc-8f4b-8bda2472a9d0/overview) Public Workspace
-* The [User Feedback](https://go.pstmn.io/flows-feedback) post in the Postman Community
+* The [Postman Flows Discussion](https://go.pstmn.io/flows-feedback) on GitHub
