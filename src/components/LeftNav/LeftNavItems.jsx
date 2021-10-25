@@ -119,7 +119,7 @@ export const leftNavItems = [
         url: '/docs/sending-requests/managing-environments/',
       },
       {
-        name: 'Visalizing responses',
+        name: 'Visualizing responses',
         url: '/docs/sending-requests/visualizer/',
       },
       {
@@ -289,7 +289,7 @@ export const leftNavItems = [
       },
       {
         name: 'Sharing your work',
-        url: '/docs/running-colldocs/collaborating-in-postman/sharing/sections/working-with-data-files/',
+        url: '/docs/collaborating-in-postman/sharing/',
       },
       {
         name: 'Your Private API Network',
