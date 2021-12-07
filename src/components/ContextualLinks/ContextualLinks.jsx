@@ -57,7 +57,7 @@ const ContextualLinks = ({ links }) => (
           // (written in /bff-data/ at build time), we simply return nothing.
 
           // This will likely be the case when you are developing locally,
-          // and do not have a .env.development file with the BFF endpoints.
+          // and do not have a .env.development file with the BFF endpoints
           return null;
         }
 
