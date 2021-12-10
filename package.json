@@ -42,6 +42,7 @@
     "gatsby-transformer-sharp": "4.3.0",
     "glob": "^7.1.4",
     "googleapis": "^55.0.0",
+    "html-react-parser": "^1.4.2",
     "identity-obj-proxy": "^3.0.0",
     "jquery": "3.5.1",
     "jquery.scrollto": "^2.1.3",

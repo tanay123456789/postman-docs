@@ -6,7 +6,6 @@ import 'bootstrap/dist/js/bootstrap.min';
 import $ from 'jquery';
 import 'jquery.scrollto';
 
-/* eslint-disable import/prefer-default-export */
 export const onClientEntry = () => {
   if (!window.location.hash) {
     window.scrollTo(0, 0);
