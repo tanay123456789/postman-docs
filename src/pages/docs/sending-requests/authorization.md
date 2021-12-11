@@ -121,7 +121,7 @@ Postman won't send authorization details with a request unless you specify an au
 
 With API key auth, you send a key-value pair to the API either in the request headers or query parameters. In the request __Authorization__ tab, select __API Key__ from the __Type__ list. Enter your key name and value, and select either __Header__ or __Query Params__ from the __Add to__ dropdown list. You can store your values in variables for additional security.
 
-![API Key Auth](https://assets.postman.com/postman-docs/api-key-auth-selection-v9.jpg)
+[![API Key Auth](https://assets.postman.com/postman-docs/api-key-auth-selection-v9.jpg)](https://assets.postman.com/postman-docs/api-key-auth-selection-v9.jpg)
 
 Postman will append the relevant information to your request __Headers__ or the URL query string.
 
