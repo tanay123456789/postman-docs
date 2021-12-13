@@ -11,11 +11,9 @@ import './doc.scss';
 import 'prismjs/themes/prism-tomorrow.css';
 import pose from '../assets/pose-learning-center.svg';
 import parse from 'html-react-parser';
-import toggleModalForImages from  '../html-react-parser/options/toggleModal'
+import convertMDToReactComponent from  '../html-react-parser/convertMDToReact'
 
 const { v4: uuidv4 } = require('uuid');
-
-
 
 const DocPage = ({ data }) => {
   const post = data.markdownRemark;
@@ -35,7 +33,8 @@ const DocPage = ({ data }) => {
             <div className="row row-eq-height">
               <main className="col-sm-12 col-md-12 col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
                 <h1>{post.frontmatter.title}</h1>
-                {parse(post.html, toggleModalForImages)}
+                {/* html-react-parser */}
+                {parse(post.html, convertMDToReactComponent)}
               </main>
               <aside className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
                 <hr className="d-block d-lg-none" />
