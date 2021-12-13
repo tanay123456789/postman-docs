@@ -33,6 +33,11 @@
     & .modal-close-button {
      display: flex;
      justify-content: end;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     -webkit-box-pack: flex-end;
+     -ms-flex-pack: flex-end;
+     justify-content: flex-end;
     }
     & .close {
       line-height: 1.4;
