@@ -6,6 +6,7 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 999999999999; /* Sit on top */
+  justify-content: center;
   left: 0;
   top: 0;
   right: 0;
@@ -15,16 +16,23 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  .modal-content {
-    position: fixed;
-    left: 5%;
-    top: 25%;
-    right: 5%;
-    transform: translate(0%, 0%);
+  cursor: pointer;
+  
+  .modal-row {
+    justify-content: center;
+  }
+  .modal-dialog {
+    position: relative;
+    text-align: center;
+    top: 15%;
+    display: block;
+    
+    img {
+      cursor: default;
+    }
     & .modal-close-button {
-      position: absolute;
-      right: 0px;
-      top: -40px;
+     display: flex;
+     justify-content: end;
     }
     & .close {
       line-height: 1.4;
@@ -34,13 +42,14 @@
       text-shadow: none;
       background-color: transparent;
       border: none;
-      &:hover {
-        background-color: #ff6b37;
-      }
+      margin-bottom:12px;
+
+      &:focus {
+        outline: none;
+    }
 
       & .close-label {
         font-size: 0.55rem !important;
-        margin-right: 0.25rem;
         vertical-align: middle;
       }
     }

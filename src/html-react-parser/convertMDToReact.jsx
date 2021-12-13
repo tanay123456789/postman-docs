@@ -44,12 +44,10 @@ const convertMDToReact = {
               <img src={src} alt={alt || ''}/>
                   </a>                
             <span id={`${id}`} className="modal fade modal-backdrop" tabIndex="-1" role="dialog" aria-labelledby={`#${id}`} aria-hidden="true">
-              <span className="modal-dialog modal-dialog-centered" role="document">
-                  <span className="modal-content">
-                    <span className="modal-column">
-                      <img src={src} alt={alt || ''} />
-                    </span>
-                  <span className="modal-close-button">
+              <span className="container modal-dialog modal-dialog-centered" role="document">
+                <span className="modal-row row">
+                  <span className="col-8">
+                    <span className="modal-close-button">
                     <button
                       type="button"
                       className="close"
@@ -62,9 +60,9 @@ const convertMDToReact = {
                       >
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="32"
-                        height="32"
-                        viewBox="0 0 32 32"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
                       >
                         <title>e-remove</title>
                         <g
@@ -79,7 +77,9 @@ const convertMDToReact = {
                         </g>
                       </svg>
                       </span>
-                    </button>
+                     </button>
+                    </span>            
+                    <img src={src} alt={alt || ''} />
                   </span>
                 </span>
               </span>
