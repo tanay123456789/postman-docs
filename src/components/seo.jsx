@@ -21,6 +21,9 @@ function SEO({
             title
             description
             author
+            siteUrl
+            siteName
+            siteImage
           }
         }
       }
@@ -41,7 +44,7 @@ function SEO({
         },
         {
           property: 'og:url',
-          content: 'https://learning.postman.com',
+          content: siteUrl,
         },
         {
           property: 'og:title',
@@ -49,11 +52,11 @@ function SEO({
         },
         {
           property: 'og:site_name',
-          content: 'Postman Learning Center',
+          content: siteName,
         },
         {
           property: 'og:image',
-          content: 'https://learning.postman.com/postman-api-platform-social-preview.jpeg',
+          content: siteImage,
         },
         {
           property: 'og:type',
@@ -61,7 +64,7 @@ function SEO({
         },
         {
           name: 'twitter:card',
-          content: 'summary_large_image',
+          content: siteImage,
         },
         {
           name: 'twitter:creator',
@@ -73,11 +76,11 @@ function SEO({
         },
         {
           property: 'twitter:domain',
-          content: 'https://learning.postman.com',
+          content: siteUrl,
         },
         {
           property: 'twitter:image',
-          content: 'https://learning.postman.com/postman-api-platform-social-preview.jpeg',
+          content: siteImage,
         },
         {
           property: 'twitter:site',

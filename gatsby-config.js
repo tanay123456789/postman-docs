@@ -14,6 +14,8 @@ module.exports = {
     description: '',
     author: 'Postman',
     siteUrl: 'https://learning.postman.com',
+    siteName: 'Postman Learning Center',
+    siteImage:'https://learning.postman.com/postman-api-platform-social-preview.jpeg'
   },
   plugins: [
     {
